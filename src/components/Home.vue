@@ -1,7 +1,9 @@
 <template>
   <div class="Home">
     
-    <p>Test</p>
+    <ul>
+      <li v-for="pokemon in pokemons" :key="">{{ pokemon.name }}</li>
+    </ul>
 
   </div>
 </template>
@@ -15,10 +17,17 @@ import Urls from '@/scripts/Urls'
 
 export default {
   name: 'HomePoke',
+
   data(){
     return{
-      pokemons: [],
+      pokemons:[],
     }   
+  },
+
+  created(){
+    fetch(Urls.pokemon)
+    .then(response => response.json()
+    .then(data => { this.pokemons = data}))
   }
 }
 

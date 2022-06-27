@@ -3,11 +3,11 @@ const URL= {
 }
 
 const rutas = {
-    ApiPokemons : URL.PokeApiUrl + 'pokemon',
+    ApiPokemon : URL.PokeApiUrl + 'pokemon',
 }
 
 const Urls = {
-    pokemons: rutas.ApiPokemons
+    pokemon: rutas.ApiPokemon
 }
 
 export default Urls;
